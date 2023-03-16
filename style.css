@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    --cor-primaria: #7A3E65;
+    --cor-secundaria: #F6E1C3;
+    --cor-terciaria: #E9A178;
+    --cor-hover: #A84448;
+    --cor-destaque: #22d4fd;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+*{ /* Reset de características de navegadores*/
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box; /* Elementos filhos sempre ficarão dentro do elemento pai */
+    /*height: 100vh; Garantido o tamanho máximo do navegador utilizado vh = 100 viewport height */
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 5%;
+}
+
+.cabecalho__menu__link{
+    color: var(--cor-terciaria);
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.apresentacao{
+    padding: 5% 15%;
+    display: flex;
+    flex-direction: row; /* Define como as flexboxs serão organizadas */
+    align-items: center; /* Centraliza os conteúdos na altura os itens dentro da classe */
+    justify-content: space-between; /* Coloca espaços entre os conteúdos */
+    gap: 82px;
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Define espaçamento entre os elementos da flexbox */
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+}
+
+.apresentacao__conteudo__texto__nome:hover{
+    font-size: 1,875rem;
+    color: var(--cor-destaque);
+}
+
+.apresentacao__links{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo{
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+}
+
+.apresentacao__links__botao{
+    /*background-color: #22D4FD; projeto antigo*/
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    width: 40%;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid var(--cor-terciaria);
+    font-size: 1.5rem;
+    padding: 21.5px 0;
+    text-decoration: none; /* Retira a decoração padrão de link clicável */
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+}
+
+.apresentacao__links__botao:hover{
+    background-color: var(--cor-hover);
+    padding: 3%;
+}
+
+.apresentacao__imagem{
+    width: 45%;
+}
+
+.rodape{
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 30px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.875rem;
+    font-weight: 400;
+}
+
+@media (max-width:1200px){
+    .cabecalho{
+        padding: 10%;
+
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5% 3%;
+    }
+
+    .apresentacao__conteudo{
+        width: auto;
+    }
+}
